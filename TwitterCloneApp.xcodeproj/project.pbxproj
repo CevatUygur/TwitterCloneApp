@@ -13,6 +13,11 @@
 		CF5D0A57294E722F00D6478B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5D0A56294E722F00D6478B /* Assets.xcassets */; };
 		CF5D0A5A294E722F00D6478B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5D0A58294E722F00D6478B /* LaunchScreen.storyboard */; };
 		CF5D0A69294E734900D6478B /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5D0A68294E734900D6478B /* MainTabController.swift */; };
+		CF84968B294E795400F7AE8F /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84968A294E795400F7AE8F /* FeedController.swift */; };
+		CF84968D294E79B500F7AE8F /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84968C294E79B500F7AE8F /* ExploreController.swift */; };
+		CF84968F294E79C900F7AE8F /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84968E294E79C900F7AE8F /* NotificationsController.swift */; };
+		CF849691294E79DB00F7AE8F /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF849690294E79DB00F7AE8F /* ConversationsController.swift */; };
+		CF849693294E8DCD00F7AE8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF849692294E8DCD00F7AE8F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		CF5D0A59294E722F00D6478B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF5D0A5B294E722F00D6478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF5D0A68294E734900D6478B /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		CF84968A294E795400F7AE8F /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		CF84968C294E79B500F7AE8F /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		CF84968E294E79C900F7AE8F /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		CF849690294E79DB00F7AE8F /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		CF849692294E8DCD00F7AE8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				CF5D0A68294E734900D6478B /* MainTabController.swift */,
+				CF84968A294E795400F7AE8F /* FeedController.swift */,
+				CF84968C294E79B500F7AE8F /* ExploreController.swift */,
+				CF84968E294E79C900F7AE8F /* NotificationsController.swift */,
+				CF849690294E79DB00F7AE8F /* ConversationsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,6 +125,7 @@
 		CF5D0A67294E727500D6478B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CF849692294E8DCD00F7AE8F /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -186,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF84968F294E79C900F7AE8F /* NotificationsController.swift in Sources */,
+				CF849691294E79DB00F7AE8F /* ConversationsController.swift in Sources */,
 				CF5D0A4E294E722E00D6478B /* AppDelegate.swift in Sources */,
+				CF849693294E8DCD00F7AE8F /* Extensions.swift in Sources */,
+				CF84968D294E79B500F7AE8F /* ExploreController.swift in Sources */,
 				CF5D0A50294E722E00D6478B /* SceneDelegate.swift in Sources */,
 				CF5D0A69294E734900D6478B /* MainTabController.swift in Sources */,
+				CF84968B294E795400F7AE8F /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
