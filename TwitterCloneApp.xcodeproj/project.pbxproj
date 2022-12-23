@@ -23,6 +23,7 @@
 		CFF08FDE295657920001AEAB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FDC295657920001AEAB /* Utilities.swift */; };
 		CFF08FDF295657920001AEAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FDD295657920001AEAB /* Extensions.swift */; };
 		CFF08FE0295658710001AEAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF08FC3295654020001AEAB /* GoogleService-Info.plist */; };
+		CFF08FE229566C520001AEAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE129566C520001AEAB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CFF08FD92956577F0001AEAB /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CFF08FDC295657920001AEAB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		CFF08FDD295657920001AEAB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CFF08FE129566C520001AEAB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 			children = (
 				CFF08FDD295657920001AEAB /* Extensions.swift */,
 				CFF08FDC295657920001AEAB /* Utilities.swift */,
+				CFF08FE129566C520001AEAB /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				CFF08FD6295657240001AEAB /* NotificationsController.swift in Sources */,
 				CFF08FD1295657240001AEAB /* FeedController.swift in Sources */,
 				CFF08FDB2956577F0001AEAB /* LoginController.swift in Sources */,
+				CFF08FE229566C520001AEAB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
