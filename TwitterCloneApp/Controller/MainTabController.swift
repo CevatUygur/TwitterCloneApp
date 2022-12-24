@@ -38,8 +38,7 @@ class MainTabController: UITabBarController {
         //logUserOut()
         view.backgroundColor = .twitterBlue
         authenticateUserAndConfigureUI()
-
-
+        
     }
     
     // MARK: - API
@@ -76,7 +75,9 @@ class MainTabController: UITabBarController {
     // MARK: - Selectors
     
     @objc func actionButtonTapped() {
-        print(123)
+        let nav = UINavigationController(rootViewController: UploadTweetController())
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
     }
     
     // MARK: - Helpers
@@ -120,12 +121,14 @@ class MainTabController: UITabBarController {
         //appearanceTabBar.backgroundColor = .white
         nav.tabBarItem.standardAppearance = appearanceTabBar
         appearanceTabBar.configureWithOpaqueBackground()
-        nav.tabBarItem.scrollEdgeAppearance = nav.tabBarItem.standardAppearance
+        if #available(iOS 15.0, *) {
+            nav.tabBarItem.scrollEdgeAppearance = nav.tabBarItem.standardAppearance
+        } else {
+            // Fallback on earlier versions
+        }
         
-    
         nav.tabBarItem.image = image
         
-    
         return nav
     }
     
