@@ -25,6 +25,7 @@
 		CFF08FE0295658710001AEAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF08FC3295654020001AEAB /* GoogleService-Info.plist */; };
 		CFF08FE229566C520001AEAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE129566C520001AEAB /* Constants.swift */; };
 		CFF08FE429571BD80001AEAB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE329571BD80001AEAB /* AuthService.swift */; };
+		CFF08FE62957396A0001AEAB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE52957396A0001AEAB /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		CFF08FDD295657920001AEAB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CFF08FE129566C520001AEAB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFF08FE329571BD80001AEAB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CFF08FE52957396A0001AEAB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF08FE329571BD80001AEAB /* AuthService.swift */,
+				CFF08FE52957396A0001AEAB /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF08FE62957396A0001AEAB /* UserService.swift in Sources */,
 				CFF08FDA2956577F0001AEAB /* RegistrationController.swift in Sources */,
 				CFF08FDE295657920001AEAB /* Utilities.swift in Sources */,
 				CFF08FD2295657240001AEAB /* ExploreController.swift in Sources */,
