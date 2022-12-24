@@ -28,6 +28,7 @@
 		CFF08FE62957396A0001AEAB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE52957396A0001AEAB /* UserService.swift */; };
 		CFF08FE829573E710001AEAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE729573E710001AEAB /* User.swift */; };
 		CFF08FEA295758220001AEAB /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE9295758220001AEAB /* UploadTweetController.swift */; };
+		CFF08FEC2957BA5D0001AEAB /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		CFF08FE52957396A0001AEAB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CFF08FE729573E710001AEAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFF08FE9295758220001AEAB /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 		CFF08FC6295656900001AEAB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				CFF08FE62957396A0001AEAB /* UserService.swift in Sources */,
 				CFF08FDA2956577F0001AEAB /* RegistrationController.swift in Sources */,
+				CFF08FEC2957BA5D0001AEAB /* CaptionTextView.swift in Sources */,
 				CFF08FDE295657920001AEAB /* Utilities.swift in Sources */,
 				CFF08FD2295657240001AEAB /* ExploreController.swift in Sources */,
 				CFF08FD4295657240001AEAB /* MainTabController.swift in Sources */,
