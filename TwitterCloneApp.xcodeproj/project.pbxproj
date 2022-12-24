@@ -24,6 +24,7 @@
 		CFF08FDF295657920001AEAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FDD295657920001AEAB /* Extensions.swift */; };
 		CFF08FE0295658710001AEAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFF08FC3295654020001AEAB /* GoogleService-Info.plist */; };
 		CFF08FE229566C520001AEAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE129566C520001AEAB /* Constants.swift */; };
+		CFF08FE429571BD80001AEAB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE329571BD80001AEAB /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		CFF08FDC295657920001AEAB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		CFF08FDD295657920001AEAB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CFF08FE129566C520001AEAB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFF08FE329571BD80001AEAB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 		CFF08FC9295656AA0001AEAB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CFF08FE329571BD80001AEAB /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CFF08FD4295657240001AEAB /* MainTabController.swift in Sources */,
 				CFF08FB0295653AA0001AEAB /* AppDelegate.swift in Sources */,
 				CFF08FB2295653AA0001AEAB /* SceneDelegate.swift in Sources */,
+				CFF08FE429571BD80001AEAB /* AuthService.swift in Sources */,
 				CFF08FDF295657920001AEAB /* Extensions.swift in Sources */,
 				CFF08FD3295657240001AEAB /* ConversationsController.swift in Sources */,
 				CFF08FD6295657240001AEAB /* NotificationsController.swift in Sources */,
