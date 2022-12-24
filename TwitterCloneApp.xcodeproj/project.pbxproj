@@ -29,6 +29,7 @@
 		CFF08FE829573E710001AEAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE729573E710001AEAB /* User.swift */; };
 		CFF08FEA295758220001AEAB /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FE9295758220001AEAB /* UploadTweetController.swift */; };
 		CFF08FEC2957BA5D0001AEAB /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */; };
+		CFF08FEE2957BF870001AEAB /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FED2957BF870001AEAB /* TweetService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		CFF08FE729573E710001AEAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFF08FE9295758220001AEAB /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
+		CFF08FED2957BF870001AEAB /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 			children = (
 				CFF08FE329571BD80001AEAB /* AuthService.swift */,
 				CFF08FE52957396A0001AEAB /* UserService.swift */,
+				CFF08FED2957BF870001AEAB /* TweetService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				CFF08FD1295657240001AEAB /* FeedController.swift in Sources */,
 				CFF08FDB2956577F0001AEAB /* LoginController.swift in Sources */,
 				CFF08FE229566C520001AEAB /* Constants.swift in Sources */,
+				CFF08FEE2957BF870001AEAB /* TweetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
