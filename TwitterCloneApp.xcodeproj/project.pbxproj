@@ -31,6 +31,7 @@
 		CFF08FEC2957BA5D0001AEAB /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */; };
 		CFF08FEE2957BF870001AEAB /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FED2957BF870001AEAB /* TweetService.swift */; };
 		CFF08FF02957C4C80001AEAB /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FEF2957C4C80001AEAB /* Tweet.swift */; };
+		CFF08FF22957CB2B0001AEAB /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FF12957CB2B0001AEAB /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		CFF08FED2957BF870001AEAB /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		CFF08FEF2957C4C80001AEAB /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		CFF08FF12957CB2B0001AEAB /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF08FEB2957BA5D0001AEAB /* CaptionTextView.swift */,
+				CFF08FF12957CB2B0001AEAB /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				CFF08FD2295657240001AEAB /* ExploreController.swift in Sources */,
 				CFF08FD4295657240001AEAB /* MainTabController.swift in Sources */,
 				CFF08FB0295653AA0001AEAB /* AppDelegate.swift in Sources */,
+				CFF08FF22957CB2B0001AEAB /* TweetCell.swift in Sources */,
 				CFF08FB2295653AA0001AEAB /* SceneDelegate.swift in Sources */,
 				CFF08FE429571BD80001AEAB /* AuthService.swift in Sources */,
 				CFF08FEA295758220001AEAB /* UploadTweetController.swift in Sources */,
