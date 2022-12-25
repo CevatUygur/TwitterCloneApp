@@ -32,6 +32,7 @@
 		CFF08FEE2957BF870001AEAB /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FED2957BF870001AEAB /* TweetService.swift */; };
 		CFF08FF02957C4C80001AEAB /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FEF2957C4C80001AEAB /* Tweet.swift */; };
 		CFF08FF22957CB2B0001AEAB /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FF12957CB2B0001AEAB /* TweetCell.swift */; };
+		CFF08FF429587A7F0001AEAB /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FF329587A7F0001AEAB /* TweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		CFF08FED2957BF870001AEAB /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		CFF08FEF2957C4C80001AEAB /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		CFF08FF12957CB2B0001AEAB /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		CFF08FF329587A7F0001AEAB /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 		CFF08FC72956569A0001AEAB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CFF08FF329587A7F0001AEAB /* TweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				CFF08FDF295657920001AEAB /* Extensions.swift in Sources */,
 				CFF08FD3295657240001AEAB /* ConversationsController.swift in Sources */,
 				CFF08FD6295657240001AEAB /* NotificationsController.swift in Sources */,
+				CFF08FF429587A7F0001AEAB /* TweetViewModel.swift in Sources */,
 				CFF08FD1295657240001AEAB /* FeedController.swift in Sources */,
 				CFF08FDB2956577F0001AEAB /* LoginController.swift in Sources */,
 				CFF08FE229566C520001AEAB /* Constants.swift in Sources */,
