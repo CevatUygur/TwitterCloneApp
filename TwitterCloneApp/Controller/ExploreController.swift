@@ -98,10 +98,13 @@ extension ExploreController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text?.lowercased() else { return }
         
-        filteredUsers = users.filter({ $0.username.contains(searchText) })
+        filteredUsers = users.filter({ (user: User) -> Bool in
+            let usernameMatch = user.username.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            let fullnameMatch = user.fullname.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            return usernameMatch != nil || fullnameMatch != nil}
+        )
         
         tableView.reloadData()
     }
-    
-    
+
 }

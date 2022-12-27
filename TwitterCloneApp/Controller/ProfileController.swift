@@ -17,7 +17,11 @@ class ProfileController: UICollectionViewController {
     private let user: User
     
     private var tweets = [Tweet]() {
-        didSet { collectionView.reloadData() }
+        
+        didSet {
+            tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
+            collectionView.reloadData()
+        }
     }
     
     

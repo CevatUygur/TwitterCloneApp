@@ -19,7 +19,11 @@ class FeedController: UICollectionViewController {
     }
     
     private var tweets = [Tweet]() {
-        didSet { collectionView.reloadData() }
+        
+        didSet {
+            tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
+            collectionView.reloadData()
+        }
     }
     
     // MARK: - Lifecycle
@@ -86,6 +90,7 @@ extension FeedController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
         
         cell.delegate = self
+        //tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
         cell.tweet = tweets[indexPath.row]
         
         return cell
