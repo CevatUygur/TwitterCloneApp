@@ -40,6 +40,8 @@ class ProfileController: UICollectionViewController {
         super.viewDidLoad()
         configureCollectionView()
         fetchTweets()
+        checkIfUserIsFollowed()
+        fetchUserStats()
         
     }
     
@@ -53,6 +55,24 @@ class ProfileController: UICollectionViewController {
     func fetchTweets() {
         TweetService.shared.fetchTweets(forUSer: user) { tweets in
             self.tweets = tweets
+        }
+    }
+    
+    func checkIfUserIsFollowed(){
+        UserService.shared.checkIfUserIsFollowed(uid: user.uid) { isFollowed in
+            self.user.isFollowed = isFollowed
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func fetchUserStats() {
+        UserService.shared.fetchUserStats(uid: user.uid) { stats in
+            print("DEBUG: User has \(stats.followers) followers")
+            print("DEBUG: User is following \(stats.following) people")
+            
+            self.user.stats = stats
+            self.collectionView.reloadData()
+        
         }
     }
     
@@ -113,20 +133,26 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 
 extension ProfileController: ProfileHeaderDelegate {
     func handleEditProfileFollow(_ header: ProfileHeader) {
-
-        print("DEBUG: User is followed is \(user.isFollowed) before button tap")
         
+        if user.isCurrentUser {
+            print("DEBUG: Show edit profile controller...")
+            return
+        }
+
         if user.isFollowed {
-            UserService.shared.unfollowUser(uid: user.uid) { (ref, err) in
+            UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
                 self.user.isFollowed = false
-                print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+                self.collectionView.reloadData()
+                self.fetchUserStats()
             }
         } else {
             UserService.shared.followUser(uid: user.uid) { (ref, err) in
                 self.user.isFollowed = true
-                print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+                self.collectionView.reloadData()
+                self.fetchUserStats()
             }
         }
+        
     }
     
     func handleDismissal() {
