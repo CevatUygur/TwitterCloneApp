@@ -41,6 +41,7 @@
 		CFF09000295A4AD80001AEAB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FFF295A4AD80001AEAB /* UserCell.swift */; };
 		CFF09002295BBC270001AEAB /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF09001295BBC270001AEAB /* TweetController.swift */; };
 		CFF09004295BBE920001AEAB /* TweetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF09003295BBE920001AEAB /* TweetHeader.swift */; };
+		CFF09006295F3D260001AEAB /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF09005295F3D260001AEAB /* UploadTweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		CFF08FFF295A4AD80001AEAB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		CFF09001295BBC270001AEAB /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
 		CFF09003295BBE920001AEAB /* TweetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetHeader.swift; sourceTree = "<group>"; };
+		CFF09005295F3D260001AEAB /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +181,7 @@
 			children = (
 				CFF08FF329587A7F0001AEAB /* TweetViewModel.swift */,
 				CFF08FFD295992B70001AEAB /* ProfileHeaderViewModel.swift */,
+				CFF09005295F3D260001AEAB /* UploadTweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				CFF08FB0295653AA0001AEAB /* AppDelegate.swift in Sources */,
 				CFF09002295BBC270001AEAB /* TweetController.swift in Sources */,
 				CFF08FF62958A4710001AEAB /* ProfileController.swift in Sources */,
+				CFF09006295F3D260001AEAB /* UploadTweetViewModel.swift in Sources */,
 				CFF08FF82958E8E80001AEAB /* ProfileHeader.swift in Sources */,
 				CFF08FF22957CB2B0001AEAB /* TweetCell.swift in Sources */,
 				CFF08FB2295653AA0001AEAB /* SceneDelegate.swift in Sources */,
