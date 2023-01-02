@@ -44,6 +44,7 @@
 		CFF09006295F3D260001AEAB /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF09005295F3D260001AEAB /* UploadTweetViewModel.swift */; };
 		CFF0900829608DCE0001AEAB /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0900729608DCE0001AEAB /* ActionSheetLauncher.swift */; };
 		CFF0900A29609BE30001AEAB /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0900929609BE30001AEAB /* ActionSheetCell.swift */; };
+		CFF0900C2962D7840001AEAB /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0900B2962D7840001AEAB /* ActionSheetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		CFF09005295F3D260001AEAB /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		CFF0900729608DCE0001AEAB /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		CFF0900929609BE30001AEAB /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
+		CFF0900B2962D7840001AEAB /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 				CFF08FF329587A7F0001AEAB /* TweetViewModel.swift */,
 				CFF08FFD295992B70001AEAB /* ProfileHeaderViewModel.swift */,
 				CFF09005295F3D260001AEAB /* UploadTweetViewModel.swift */,
+				CFF0900B2962D7840001AEAB /* ActionSheetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				CFF08FD6295657240001AEAB /* NotificationsController.swift in Sources */,
 				CFF09004295BBE920001AEAB /* TweetHeader.swift in Sources */,
 				CFF08FF429587A7F0001AEAB /* TweetViewModel.swift in Sources */,
+				CFF0900C2962D7840001AEAB /* ActionSheetViewModel.swift in Sources */,
 				CFF08FD1295657240001AEAB /* FeedController.swift in Sources */,
 				CFF08FDB2956577F0001AEAB /* LoginController.swift in Sources */,
 				CFF08FFA295970320001AEAB /* ProfileFilterView.swift in Sources */,
