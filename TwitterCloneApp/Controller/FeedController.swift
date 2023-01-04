@@ -21,7 +21,6 @@ class FeedController: UICollectionViewController {
     private var tweets = [Tweet]() {
         
         didSet {
-            tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
             collectionView.reloadData()
         }
     }
