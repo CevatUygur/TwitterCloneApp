@@ -47,6 +47,7 @@
 		CFF0900C2962D7840001AEAB /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0900B2962D7840001AEAB /* ActionSheetViewModel.swift */; };
 		CFF8A51C2966149B0028D8C8 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A51B2966149B0028D8C8 /* Notification.swift */; };
 		CFF8A51E2966181F0028D8C8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A51D2966181F0028D8C8 /* NotificationService.swift */; };
+		CFF8A52029662A6C0028D8C8 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A51F29662A6C0028D8C8 /* NotificationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		CFF0900B2962D7840001AEAB /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		CFF8A51B2966149B0028D8C8 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CFF8A51D2966181F0028D8C8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		CFF8A51F29662A6C0028D8C8 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				CFF08FFF295A4AD80001AEAB /* UserCell.swift */,
 				CFF09003295BBE920001AEAB /* TweetHeader.swift */,
 				CFF0900929609BE30001AEAB /* ActionSheetCell.swift */,
+				CFF8A51F29662A6C0028D8C8 /* NotificationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				CFF08FF429587A7F0001AEAB /* TweetViewModel.swift in Sources */,
 				CFF0900C2962D7840001AEAB /* ActionSheetViewModel.swift in Sources */,
 				CFF08FD1295657240001AEAB /* FeedController.swift in Sources */,
+				CFF8A52029662A6C0028D8C8 /* NotificationCell.swift in Sources */,
 				CFF08FDB2956577F0001AEAB /* LoginController.swift in Sources */,
 				CFF08FFA295970320001AEAB /* ProfileFilterView.swift in Sources */,
 				CFF08FE229566C520001AEAB /* Constants.swift in Sources */,
