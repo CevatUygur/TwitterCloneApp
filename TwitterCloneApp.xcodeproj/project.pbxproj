@@ -46,6 +46,7 @@
 		CFF0900A29609BE30001AEAB /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0900929609BE30001AEAB /* ActionSheetCell.swift */; };
 		CFF0900C2962D7840001AEAB /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0900B2962D7840001AEAB /* ActionSheetViewModel.swift */; };
 		CFF8A51C2966149B0028D8C8 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A51B2966149B0028D8C8 /* Notification.swift */; };
+		CFF8A51E2966181F0028D8C8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A51D2966181F0028D8C8 /* NotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		CFF0900929609BE30001AEAB /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		CFF0900B2962D7840001AEAB /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		CFF8A51B2966149B0028D8C8 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		CFF8A51D2966181F0028D8C8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		E0B26CB647A993881FB43759 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -219,6 +221,7 @@
 				CFF08FE329571BD80001AEAB /* AuthService.swift */,
 				CFF08FE52957396A0001AEAB /* UserService.swift */,
 				CFF08FED2957BF870001AEAB /* TweetService.swift */,
+				CFF8A51D2966181F0028D8C8 /* NotificationService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				CFF08FDF295657920001AEAB /* Extensions.swift in Sources */,
 				CFF08FD3295657240001AEAB /* ConversationsController.swift in Sources */,
 				CFF08FD6295657240001AEAB /* NotificationsController.swift in Sources */,
+				CFF8A51E2966181F0028D8C8 /* NotificationService.swift in Sources */,
 				CFF09004295BBE920001AEAB /* TweetHeader.swift in Sources */,
 				CFF08FF429587A7F0001AEAB /* TweetViewModel.swift in Sources */,
 				CFF0900C2962D7840001AEAB /* ActionSheetViewModel.swift in Sources */,
