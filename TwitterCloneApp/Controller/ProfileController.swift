@@ -19,11 +19,10 @@ class ProfileController: UICollectionViewController {
     private var tweets = [Tweet]() {
         
         didSet {
-            tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
+            //tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
             collectionView.reloadData()
         }
     }
-    
     
     // MARK: - Lifecycle
     
@@ -42,7 +41,6 @@ class ProfileController: UICollectionViewController {
         fetchTweets()
         checkIfUserIsFollowed()
         fetchUserStats()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,12 +65,8 @@ class ProfileController: UICollectionViewController {
     
     func fetchUserStats() {
         UserService.shared.fetchUserStats(uid: user.uid) { stats in
-            print("DEBUG: User has \(stats.followers) followers")
-            print("DEBUG: User is following \(stats.following) people")
-            
             self.user.stats = stats
             self.collectionView.reloadData()
-        
         }
     }
     
@@ -87,7 +81,6 @@ class ProfileController: UICollectionViewController {
         collectionView.register(ProfileHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
-        
     }
 }
 
@@ -134,7 +127,6 @@ extension ProfileController: ProfileHeaderDelegate {
     func handleEditProfileFollow(_ header: ProfileHeader) {
         
         if user.isCurrentUser {
-            print("DEBUG: Show edit profile controller...")
             return
         }
 
@@ -153,7 +145,6 @@ extension ProfileController: ProfileHeaderDelegate {
                 NotificationService.shared.uploadNotification(type: .follow, user: self.user)
             }
         }
-        
     }
     
     func handleDismissal() {
