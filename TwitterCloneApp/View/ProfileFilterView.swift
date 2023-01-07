@@ -10,7 +10,7 @@ import UIKit
 private let reuseIdentifier = "ProfileFilterCell"
 
 protocol ProfileFilterViewDelegate: class {
-    func filterView(_ view: ProfileFilterView, didSelect indexPath: IndexPath)
+    func filterView(_ view: ProfileFilterView, didSelect index: Int)
 }
 
 class ProfileFilterView: UIView {
@@ -94,7 +94,9 @@ extension ProfileFilterView: UICollectionViewDelegate {
             self.underlineView.frame.origin.x = xPosition
         }
         
-        delegate?.filterView(self, didSelect: indexPath)
+        print("DEBUG: Delegate action to profile header from filter bar...")
+        
+        delegate?.filterView(self, didSelect: indexPath.row)
     }
 }
 
