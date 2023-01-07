@@ -19,6 +19,8 @@ class ProfileFilterView: UIView {
     
     weak var delegate: ProfileFilterViewDelegate?
     
+    let count = CGFloat(ProfileFilterOptions.allCases.count)
+    
     lazy var collectionview: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -26,6 +28,12 @@ class ProfileFilterView: UIView {
         cv.delegate = self
         cv.dataSource = self
         return cv
+    }()
+    
+    private let underlineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .twitterBlue
+        return view
     }()
     
     // MARK: - Lifecycle
@@ -40,6 +48,14 @@ class ProfileFilterView: UIView {
         
         addSubview(collectionview)
         collectionview.addConstraintsToFillView(self)
+    }
+    
+    override func layoutSubviews() {
+        addSubview(underlineView)
+        underlineView.anchor(left: leftAnchor,
+                             bottom: bottomAnchor,
+                             width: frame.width / count,
+                             height: 2)
     }
     
     required init?(coder: NSCoder) {
@@ -70,6 +86,14 @@ extension ProfileFilterView: UICollectionViewDataSource {
 
 extension ProfileFilterView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        let xPosition = cell?.frame.origin.x ?? 0
+        
+        UIView.animate(withDuration: 0.3) {
+            self.underlineView.frame.origin.x = xPosition
+        }
+        
         delegate?.filterView(self, didSelect: indexPath)
     }
 }
