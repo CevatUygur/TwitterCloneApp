@@ -49,7 +49,7 @@ struct TweetService {
                 
                 self.fetchTweet(withTweetID: tweetID) { tweet in
                     tweets.append(tweet)
-                    completion(tweets)
+                    completion(tweets.sorted(by: { $0.timestamp > $1.timestamp }))
                 }
             }
         }
@@ -59,7 +59,7 @@ struct TweetService {
             
             self.fetchTweet(withTweetID: tweetID) { tweet in
                 tweets.append(tweet)
-                completion(tweets)
+                completion(tweets.sorted(by: { $0.timestamp > $1.timestamp }))
             }
         }
     }
@@ -72,7 +72,7 @@ struct TweetService {
             
             fetchTweet(withTweetID: tweetID) { tweet in
                 tweets.append(tweet)
-                completion(tweets)
+                completion(tweets.sorted(by: { $0.timestamp > $1.timestamp }))
             }
         }
     }
@@ -104,7 +104,7 @@ struct TweetService {
                 UserService.shared.fetchUser(uid: uid) { user in
                     let reply = Tweet(user: user, tweetID: replyID, dictionary: dictionary)
                     replies.append(reply)
-                    completion(replies)
+                    completion(replies.sorted(by: { $0.timestamp > $1.timestamp }))
                 }
             }
         }
@@ -121,7 +121,7 @@ struct TweetService {
             UserService.shared.fetchUser(uid: uid) { user in
                 let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
                 tweets.append(tweet)
-                completion(tweets)
+                completion(tweets.sorted(by: { $0.timestamp > $1.timestamp }))
             }
         }
     }
@@ -136,7 +136,7 @@ struct TweetService {
                 var tweet = likedTweet
                 tweet.didLike = true
                 tweets.append(tweet)
-                completion(tweets)
+                completion(tweets.sorted(by: { $0.timestamp > $1.timestamp }))
             }
         }
     }
