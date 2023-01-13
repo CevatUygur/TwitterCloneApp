@@ -36,9 +36,13 @@ class MainTabController: UITabBarController {
         super.viewDidLoad()
         
         //logUserOut()
-        view.backgroundColor = .twitterBlue
+        //view.backgroundColor = .twitterBlue
         authenticateUserAndConfigureUI()
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: - API
@@ -111,27 +115,18 @@ class MainTabController: UITabBarController {
     
     func templateNavigationController(image: UIImage?, rootViewController: UIViewController) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
-        
-        let appearanceNavBar = UINavigationBarAppearance()
-        //appearanceNavBar.configureWithTransparentBackground()
-        appearanceNavBar.configureWithOpaqueBackground()
-        appearanceNavBar.backgroundColor = .white
-        nav.navigationBar.standardAppearance = appearanceNavBar
-        nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
-        
-        let appearanceTabBar = UITabBarAppearance()
-        //appearanceTabBar.configureWithTransparentBackground()
-        //appearanceTabBar.backgroundColor = .white
-        nav.tabBarItem.standardAppearance = appearanceTabBar
-        appearanceTabBar.configureWithOpaqueBackground()
-        if #available(iOS 15.0, *) {
-            nav.tabBarItem.scrollEdgeAppearance = nav.tabBarItem.standardAppearance
-        } else {
-            // Fallback on earlier versions
-        }
-        
         nav.tabBarItem.image = image
         
+        if #available(iOS 15.0, *) {
+            let appearanceNavBar = UINavigationBarAppearance()
+            appearanceNavBar.configureWithOpaqueBackground()
+            appearanceNavBar.backgroundColor = .white
+            nav.navigationBar.standardAppearance = appearanceNavBar
+            nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
+        } else {
+            nav.navigationBar.barTintColor = .white
+        }
+ 
         return nav
     }
     
