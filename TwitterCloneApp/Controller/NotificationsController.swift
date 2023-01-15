@@ -46,6 +46,7 @@ class NotificationsController: UITableViewController {
             self.notifications = notifications
             self.checkIfUserIsFollowed(notifications: notifications)
         }
+        
         self.refreshControl?.endRefreshing()
     }
     

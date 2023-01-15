@@ -140,7 +140,7 @@ extension TweetController: ActionSheetLauncherDelegate {
         case .follow(let user):
             UserService.shared.followUser(uid: user.uid) { (err, ref) in
                 print("DEBUG: Did follow user \(user.username)")
-                NotificationService.shared.uploadNotification(type: .follow, user: user)
+                NotificationService.shared.uploadNotification(toUser: self.tweet.user, type: .follow)
             }
         case .unfollow(let user):
             UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in

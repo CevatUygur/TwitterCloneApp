@@ -37,7 +37,6 @@ struct EditProfileViewModel {
         }
     }
 
-    
     var shouldHideTextField: Bool {
         return option == .bio
     }
@@ -47,7 +46,7 @@ struct EditProfileViewModel {
     }
     
     var shouldHidePlaceholderLabel: Bool {
-        return user.bio != nil
+        return user.bio?.count != 0
     }
     
     init(user: User, option: EditProfileOptions) {

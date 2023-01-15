@@ -144,7 +144,25 @@ extension ProfileController {
 
 extension ProfileController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 350)
+        
+        var height: CGFloat = 300
+        
+        if let bio = user.bio {
+            
+            if bio.count == 0 {
+                //Nothing
+
+            } else if bio.count > 0 && bio.count <= 50 {
+                height += 18
+
+            } else if bio.count > 50 && bio.count <= 101 {
+                height += 36
+ 
+            } else {
+                height += 54
+            }
+        }
+        return CGSize(width: view.frame.width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -192,7 +210,8 @@ extension ProfileController: ProfileHeaderDelegate {
                 self.collectionView.reloadData()
                 self.fetchUserStats()
                 
-                NotificationService.shared.uploadNotification(type: .follow, user: self.user)
+                NotificationService.shared.uploadNotification(toUser: self.user, type: .follow)
+                
             }
         }
     }
