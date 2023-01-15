@@ -199,6 +199,7 @@ class ProfileHeader: UICollectionReusableView {
         
         fullnameLabel.text = user.fullname
         usernameLabel.text = "@\(user.username)"
+        bioLabel.text = user.bio
     }
 
 }
