@@ -18,7 +18,7 @@
 		CFF08FB9295653AB0001AEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF08FB8295653AB0001AEAB /* Assets.xcassets */; };
 		CFF08FBC295653AB0001AEAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF08FBA295653AB0001AEAB /* LaunchScreen.storyboard */; };
 		CFF08FD1295657240001AEAB /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FCB295657230001AEAB /* FeedController.swift */; };
-		CFF08FD2295657240001AEAB /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FCC295657230001AEAB /* ExploreController.swift */; };
+		CFF08FD2295657240001AEAB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FCC295657230001AEAB /* SearchController.swift */; };
 		CFF08FD3295657240001AEAB /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FCD295657230001AEAB /* ConversationsController.swift */; };
 		CFF08FD4295657240001AEAB /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FCE295657230001AEAB /* MainTabController.swift */; };
 		CFF08FD6295657240001AEAB /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF08FD0295657240001AEAB /* NotificationsController.swift */; };
@@ -72,7 +72,7 @@
 		CFF08FBD295653AB0001AEAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFF08FC3295654020001AEAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFF08FCB295657230001AEAB /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
-		CFF08FCC295657230001AEAB /* ExploreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		CFF08FCC295657230001AEAB /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		CFF08FCD295657230001AEAB /* ConversationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		CFF08FCE295657230001AEAB /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		CFF08FD0295657240001AEAB /* NotificationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 				CFF08FD72956573E0001AEAB /* Authentication */,
 				CFF08FCE295657230001AEAB /* MainTabController.swift */,
 				CFF08FCB295657230001AEAB /* FeedController.swift */,
-				CFF08FCC295657230001AEAB /* ExploreController.swift */,
+				CFF08FCC295657230001AEAB /* SearchController.swift */,
 				CFF08FD0295657240001AEAB /* NotificationsController.swift */,
 				CFF08FCD295657230001AEAB /* ConversationsController.swift */,
 				CFF08FE9295758220001AEAB /* UploadTweetController.swift */,
@@ -397,7 +397,7 @@
 				CFF08FFC295972940001AEAB /* ProfileFilterCell.swift in Sources */,
 				CFF08FDE295657920001AEAB /* Utilities.swift in Sources */,
 				CFF09000295A4AD80001AEAB /* UserCell.swift in Sources */,
-				CFF08FD2295657240001AEAB /* ExploreController.swift in Sources */,
+				CFF08FD2295657240001AEAB /* SearchController.swift in Sources */,
 				CFD909D929720363003C0F59 /* EditProfileController.swift in Sources */,
 				CFF0900A29609BE30001AEAB /* ActionSheetCell.swift in Sources */,
 				CFF08FD4295657240001AEAB /* MainTabController.swift in Sources */,
