@@ -8,7 +8,7 @@
 import UIKit
 import ActiveLabel
 
-protocol TweetHeaderDelegate: class {
+protocol TweetHeaderDelegate: AnyObject {
     func showActionSheet()
     func handleFetchUser(withUsername username: String)
 }

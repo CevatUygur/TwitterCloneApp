@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol NotificationCellDelegate: class {
+protocol NotificationCellDelegate: AnyObject {
     func didTapProfileImage(_ cell: NotificationCell)
     func didTapFollow(_ cell: NotificationCell)
 }

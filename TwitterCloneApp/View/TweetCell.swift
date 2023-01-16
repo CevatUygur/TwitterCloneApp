@@ -8,7 +8,7 @@
 import UIKit
 import ActiveLabel
 
-protocol TweetCellDelegate: class {
+protocol TweetCellDelegate: AnyObject {
     func handleProfileImageTapped(_ cell: TweetCell)
     func handleReplyTapped(_ cell: TweetCell)
     func handleLikeTapped(_ cell: TweetCell)

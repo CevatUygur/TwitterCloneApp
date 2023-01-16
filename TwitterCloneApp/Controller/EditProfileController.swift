@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "EditProfileCell"
 
-protocol EditProfileControllerDelegate: class {
+protocol EditProfileControllerDelegate: AnyObject {
     func controller(_ controller: EditProfileController, wantsToUpdate user: User)
     func handleLogout()
 }

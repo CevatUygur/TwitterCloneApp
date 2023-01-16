@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ProfileHeaderDelegate: class {
+protocol ProfileHeaderDelegate: AnyObject {
     func handleDismissal()
     func handleEditProfileFollow(_ header: ProfileHeader)
     func didSelect(filter: ProfileFilterOptions)

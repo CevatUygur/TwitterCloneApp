@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol EditProfileCellDelegate: class {
+protocol EditProfileCellDelegate: AnyObject {
     func updateUserInfo(_ cell: EditProfileCell)
 }
 
