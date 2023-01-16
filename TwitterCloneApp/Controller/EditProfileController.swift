@@ -11,6 +11,7 @@ private let reuseIdentifier = "EditProfileCell"
 
 protocol EditProfileControllerDelegate: class {
     func controller(_ controller: EditProfileController, wantsToUpdate user: User)
+    func handleLogout()
 }
 
 class EditProfileController: UITableViewController {
@@ -19,6 +20,7 @@ class EditProfileController: UITableViewController {
     
     private var user: User
     private lazy var headerView = EditProfileHeader(user: user)
+    private let footerView = EditProfileFooter()
     private let imagePicker = UIImagePickerController()
     weak var delegate: EditProfileControllerDelegate?
     
@@ -120,8 +122,10 @@ class EditProfileController: UITableViewController {
     func configureTableView() {
         tableView.tableHeaderView = headerView
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 180)
-        tableView.tableFooterView = UIView()
+        footerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 100)
+        tableView.tableFooterView = footerView
         
+        footerView.delegate = self
         headerView.delegate = self
         tableView.register(EditProfileCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
@@ -196,5 +200,23 @@ extension EditProfileController: EditProfileCellDelegate {
         case .bio:
             user.bio = cell.bioTextView.text
         }
+    }
+}
+// MARK: -EditProfileFooterDelegate
+
+extension EditProfileController: EditProfileFooterDelegate {
+    func handleLogout() {
+        
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to log out?", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { _ in
+            self.dismiss(animated: true) {
+                self.delegate?.handleLogout()
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
     }
 }

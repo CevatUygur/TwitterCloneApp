@@ -53,6 +53,7 @@
 		CFF8A51E2966181F0028D8C8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A51D2966181F0028D8C8 /* NotificationService.swift */; };
 		CFF8A52029662A6C0028D8C8 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A51F29662A6C0028D8C8 /* NotificationCell.swift */; };
 		CFF8A52229663AB40028D8C8 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8A52129663AB40028D8C8 /* NotificationViewModel.swift */; };
+		CFFD506C29748085009C4289 /* EditProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFD506B29748085009C4289 /* EditProfileFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		CFF8A51D2966181F0028D8C8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		CFF8A51F29662A6C0028D8C8 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		CFF8A52129663AB40028D8C8 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		CFFD506B29748085009C4289 /* EditProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFooter.swift; sourceTree = "<group>"; };
 		D23731FF6B8880A0D3F30B6C /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				CFF08FFB295972940001AEAB /* ProfileFilterCell.swift */,
 				CFD909DB297212BA003C0F59 /* EditProfileHeader.swift */,
 				CFD909DF2972B1F1003C0F59 /* EditProfileCell.swift */,
+				CFFD506B29748085009C4289 /* EditProfileFooter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				CFF08FD1295657240001AEAB /* FeedController.swift in Sources */,
 				CFF8A52029662A6C0028D8C8 /* NotificationCell.swift in Sources */,
 				CFD909DE2972B12E003C0F59 /* EditProfileViewModel.swift in Sources */,
+				CFFD506C29748085009C4289 /* EditProfileFooter.swift in Sources */,
 				CFF08FDB2956577F0001AEAB /* LoginController.swift in Sources */,
 				CFF08FFA295970320001AEAB /* ProfileFilterView.swift in Sources */,
 				CFF08FE229566C520001AEAB /* Constants.swift in Sources */,
