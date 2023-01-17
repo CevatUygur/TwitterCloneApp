@@ -61,15 +61,21 @@ class SearchController: UITableViewController {
     // MARK: - API
     
     func fetchUsers() {
+        refreshControl?.beginRefreshing()
         UserService.shared.fetchUsers() { users in
             self.users = users
         }
+        refreshControl?.endRefreshing()
     }
     
     // MARK: - Selectors
     
     @objc func handleDismissal() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func handleRefresh() {
+        fetchUsers()
     }
     
     // MARK: - Helpers
@@ -85,6 +91,8 @@ class SearchController: UITableViewController {
         if config == .messages {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleDismissal))
         }
+        
+
     }
 
     func configureSearchController() {
@@ -94,6 +102,10 @@ class SearchController: UITableViewController {
         searchController.searchBar.placeholder = "Search for a user"
         navigationItem.searchController = searchController
         definesPresentationContext = false
+        
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         
     }
     
