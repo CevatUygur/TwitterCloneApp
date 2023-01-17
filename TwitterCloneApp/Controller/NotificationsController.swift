@@ -43,10 +43,10 @@ class NotificationsController: UITableViewController {
     func fetchNotifications() {
         refreshControl?.beginRefreshing()
         NotificationService.shared.fetchNotifications { notifications in
-            self.refreshControl?.endRefreshing()
             self.notifications = notifications.sorted(by: { $0.timestamp > $1.timestamp })
-            self.checkIfUserIsFollowed(notifications: notifications)
+            self.checkIfUserIsFollowed(notifications: self.notifications)
         }
+        refreshControl?.endRefreshing()
     }
     
     func checkIfUserIsFollowed(notifications: [Notification]) {
