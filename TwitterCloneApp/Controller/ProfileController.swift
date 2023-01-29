@@ -152,13 +152,10 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
             
             if bio.isEmpty {
                 //Nothing
-
-            } else if bio.count > 0 && bio.count <= 50 {
+            } else if bio.count <= 50 {
                 height += 18
-
             } else if bio.count > 50 && bio.count <= 101 {
                 height += 36
- 
             } else {
                 height += 54
             }
