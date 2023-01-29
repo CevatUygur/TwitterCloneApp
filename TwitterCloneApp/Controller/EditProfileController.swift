@@ -74,14 +74,14 @@ class EditProfileController: UITableViewController {
         
         if !imageChanged && userInfoChanged {
             print("DEBUG: Changed data and not image...")
-            UserService.shared.saveUserData(user: user) { (err, ref) in
+            UserService.shared.saveUserData(user: user) { (_, _) in
                 self.delegate?.controller(self, wantsToUpdate: self.user)
             }
         }
         
         if imageChanged && userInfoChanged {
             print("DEBUG: Changed both image and data...")
-            UserService.shared.saveUserData(user: user) { (err, ref) in
+            UserService.shared.saveUserData(user: user) { (_, _) in
                 self.updateProfileImage()
             }
         }

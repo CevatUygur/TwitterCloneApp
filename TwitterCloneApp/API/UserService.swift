@@ -36,7 +36,7 @@ struct UserService {
     func followUser(uid: String, completion: @escaping(DatabaseCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
-        REF_USER_FOLLOWING.child(currentUid).updateChildValues([uid: 1]) { (err, ref) in
+        REF_USER_FOLLOWING.child(currentUid).updateChildValues([uid: 1]) { (_, _) in
             REF_USER_FOLLOWERS.child(uid).updateChildValues([currentUid: 1], withCompletionBlock: completion)
         }
     }
@@ -44,7 +44,7 @@ struct UserService {
     func unfollowUser(uid: String, completion: @escaping(DatabaseCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
-        REF_USER_FOLLOWING.child(currentUid).child(uid).removeValue { (err, ref) in
+        REF_USER_FOLLOWING.child(currentUid).child(uid).removeValue { (_, _) in
             REF_USER_FOLLOWERS.child(uid).child(currentUid).removeValue(completionBlock: completion)
         }
     }
@@ -77,12 +77,12 @@ struct UserService {
         let filename = NSUUID().uuidString
         let ref = STORAGE_PROFILE_IMAGES.child(filename)
         
-        ref.putData(imageData, metadata: nil) { (meta, error) in
-            ref.downloadURL { (url, error) in
+        ref.putData(imageData, metadata: nil) { (_, _) in
+            ref.downloadURL { (url, _) in
                 guard let profileImageUrl = url?.absoluteString else { return }
                 let values = ["profileImageUrl": profileImageUrl]
                 
-                REF_USERS.child(uid).updateChildValues(values) { (err, ref) in
+                REF_USERS.child(uid).updateChildValues(values) { (_, _) in
                     completion(url)
                 }
             }

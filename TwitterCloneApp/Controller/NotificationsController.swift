@@ -115,11 +115,11 @@ extension NotificationsController: NotificationCellDelegate {
         guard let user = cell.notification?.user else { return }
         
         if user.isFollowed {
-            UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
+            UserService.shared.unfollowUser(uid: user.uid) { (_, _) in
                 cell.notification?.user.isFollowed = false
             }
         } else {
-            UserService.shared.followUser(uid: user.uid) { (err, ref) in
+            UserService.shared.followUser(uid: user.uid) { (_, _) in
                 cell.notification?.user.isFollowed = true
             }
         }

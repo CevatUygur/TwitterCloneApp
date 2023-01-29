@@ -149,12 +149,12 @@ struct TweetService {
         
         if tweet.didLike {
             // unlike tweet
-            REF_USER_LIKES.child(uid).child(tweet.tweetID).removeValue { (err, ref) in
+            REF_USER_LIKES.child(uid).child(tweet.tweetID).removeValue { (_, _) in
                 REF_TWEET_LIKES.child(tweet.tweetID).removeValue(completionBlock: completion)
             }
         } else {
             // like tweet
-            REF_USER_LIKES.child(uid).updateChildValues([tweet.tweetID: 1]) { (err, ref) in
+            REF_USER_LIKES.child(uid).updateChildValues([tweet.tweetID: 1]) { (_, _) in
                 REF_TWEET_LIKES.child(tweet.tweetID).updateChildValues([uid: 1], withCompletionBlock: completion)
             }
         }

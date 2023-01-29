@@ -118,7 +118,7 @@ class RegistrationController: UIViewController {
         
         let credentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
         
-        AuthService.shared.registerUSer(credentials: credentials) { (error, ref) in
+        AuthService.shared.registerUSer(credentials: credentials) { (_, _) in
             
             guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
             guard let tab = window.rootViewController as? MainTabController else { return }
