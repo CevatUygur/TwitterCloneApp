@@ -46,7 +46,7 @@ struct EditProfileViewModel {
     }
     
     var shouldHidePlaceholderLabel: Bool {
-        return user.bio?.count != 0
+        return !(user.bio?.isEmpty ?? false)
     }
     
     init(user: User, option: EditProfileOptions) {

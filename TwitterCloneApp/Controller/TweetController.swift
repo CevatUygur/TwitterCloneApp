@@ -36,6 +36,8 @@ class TweetController: UICollectionViewController {
         super.viewDidLoad()
         configureCollectionView()
         fetchReplies()
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,6 +81,7 @@ extension TweetController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
         
         cell.tweet = replies[indexPath.row]
+
         return cell
     }
 }
@@ -101,10 +104,13 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
         let viewModel = TweetViewModel(tweet: tweet)
         let captionHeight = viewModel.size(forWidth: view.frame.width).height
         
-        return CGSize(width: view.frame.width, height: captionHeight + 300)
+        return CGSize(width: view.frame.width, height: captionHeight + 240)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as UICollectionViewCell
+            
         return CGSize(width: view.frame.width, height: 120)
     }
 }
@@ -138,12 +144,12 @@ extension TweetController: ActionSheetLauncherDelegate {
     func didSelect(option: ActionSheetOptions) {
         switch option {
         case .follow(let user):
-            UserService.shared.followUser(uid: user.uid) { (err, ref) in
+            UserService.shared.followUser(uid: user.uid) { (_, _) in
                 print("DEBUG: Did follow user \(user.username)")
                 NotificationService.shared.uploadNotification(toUser: self.tweet.user, type: .follow)
             }
         case .unfollow(let user):
-            UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
+            UserService.shared.unfollowUser(uid: user.uid) { (_, _) in
                 print("DEBUG: Did unfollow user \(user.username)")
             }
         case .report:

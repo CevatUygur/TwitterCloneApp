@@ -22,7 +22,7 @@ struct TweetService {
         switch type {
         case .tweet:
             
-            REF_TWEETS.childByAutoId().updateChildValues(values) { (err, ref) in
+            REF_TWEETS.childByAutoId().updateChildValues(values) { (_, ref) in
                 // update user-tweet structure after tweet upload completes
                 guard let tweetID = ref.key else { return }
                 REF_USER_TWEETS.child(uid).updateChildValues([tweetID: 1], withCompletionBlock: completion)
@@ -30,7 +30,7 @@ struct TweetService {
         case .reply(let tweet):
             values["replyingTo"] = tweet.user.username
             
-            REF_TWEET_REPLIES.child(tweet.tweetID).childByAutoId().updateChildValues(values) { (err, ref) in
+            REF_TWEET_REPLIES.child(tweet.tweetID).childByAutoId().updateChildValues(values) { (_, ref) in
                 guard let replyKey = ref.key else { return }
                 REF_USER_REPLIES.child(uid).updateChildValues([tweet.tweetID: replyKey], withCompletionBlock: completion)
             }

@@ -150,7 +150,7 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
         
         if let bio = user.bio {
             
-            if bio.count == 0 {
+            if bio.isEmpty {
                 //Nothing
 
             } else if bio.count > 0 && bio.count <= 50 {
@@ -200,13 +200,13 @@ extension ProfileController: ProfileHeaderDelegate {
         }
 
         if user.isFollowed {
-            UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
+            UserService.shared.unfollowUser(uid: user.uid) { (_, _) in
                 self.user.isFollowed = false
                 self.collectionView.reloadData()
                 self.fetchUserStats()
             }
         } else {
-            UserService.shared.followUser(uid: user.uid) { (ref, err) in
+            UserService.shared.followUser(uid: user.uid) { (_, _) in
                 self.user.isFollowed = true
                 self.collectionView.reloadData()
                 self.fetchUserStats()
